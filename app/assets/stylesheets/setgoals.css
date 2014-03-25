@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 22, 2014, 4:44:57 PM
+    Author     : huapa_000
+*/
+body,html{
+    margin:0;
+    padding:0;
+}
+section{
+    margin-top: 0;
+    height: 100vh;
+    min-height:650px;
+    padding:5%;
+    
+    line-height: 1.5em; 
+    color: white;
+    font-size: 2em;
+}
+
+h1:not(:first-child){
+    font-size: 1.5em;
+}
+h1:first-child{
+    font-size:1.15em;
+}
+section:first-child{
+    padding-top: 90px;
+    background-color: #3498db;
+}
+
+section:nth-child(2){
+    background-color: #27ae60;
+}
+section:nth-child(3){
+    background-color: #1abc9c;
+}
+section:nth-child(4){
+    background-color: #9b59b6;
+}
+section:nth-child(5){
+    background-color: #e74c3c;
+}
+section:nth-child(6){
+    background-color: #e67e22;
+}
+
+
+textarea {
+		position: relative;
+                z-index: 2;
+		outline: none;
+		border: none;
+		background: transparent;
+		color: white;
+		font-weight: 300;
+		font-family: 'Lato', Arial, sans-serif;
+                font-size: 1em;
+                width:95%;
+		cursor: pointer;
+}
+#set-goals-icon-wrapper{
+    position: static;
+    background: transparent;
+    text-align: center;
+}
+.set-goals-submit{
+    width:20vh;
+    margin-left: 0vh;
+    margin-right 40vh;
+}
+.icon-arrow-down{
+    display:none;
+}
+.icon-checkmark2{
+    display:block;
+}

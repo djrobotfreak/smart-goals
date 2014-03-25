@@ -1,0 +1,31 @@
+<% if user_signed_in? %> 
+<table>
+  <tbody>
+
+  <div class="container" id="main_container">
+      <p>
+        <span class="smart_title">Your goals:</span>
+      </p>
+    <ul class="goals">
+	<% if current_user.goals.empty? != true %>
+	    <%current_user.goals.each do |goal| %>
+        	<%if goal.id != nil %>
+          <li>
+           		<%= goal.name %>
+             		<%= link_to "View", "/goals/#{goal.id}" %>
+        	</li>
+          <%end%>
+	    <% end %>
+        <% else %>
+          <%= link_to "Add Goal", welcome_goals_path %>
+	      <% end %>
+    </ul>
+      <div id="icon">
+        <span class="icon-plus"></span> 
+      </div>
+  </div>
+
+</tbody>
+</table>
+<% end %>
+

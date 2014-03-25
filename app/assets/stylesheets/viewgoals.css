@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 22, 2014, 4:44:57 PM
+    Author     : huapa_000
+*/
+.smart-goal-title{
+    
+    font-size: 2.5em;
+}
+
+#smart-list{
+    list-style:none;
+    font-size: 2em;
+}
+#smart-list li li{
+    padding-left: 60px;
+    display:inline-block;
+    position:relative;
+    margin-bottom: 2%;
+}
+#smart-list li:before{
+    font-size: 24pt;  
+    text-align: center;  
+    line-height: 42px;  
+    color: #5f9ea0;  
+    float: left;  
+    position: absolute;  
+    top: 2px;  
+    left:10px;
+  
+    /** define it as a block element **/  
+    display: inline-block;             
+}
+#view-goals-icon-wrapper{
+    position: static;
+    margin-bottom: 10vh;
+}
+.icon-pencil{
+    display:inline-block;
+}

@@ -1,0 +1,53 @@
+<table>
+  <tbody>
+  <div class="container" id="setgoals_main_container">
+      <section class="window">
+          <h1>Congratulations!</h1>
+          <p>
+              You have begun the journey towards clearly defined goals, a sense of focus, and fulfillment. 
+          </p>
+       <%= form_for :goal do |f| %>
+          <h4>Name of Goal</h4>
+          <%= f.text_area :name, :rows => "6", :placeholder =>"What goal will you achieve?..."%> 
+      </section>
+      
+      <section class="window">
+          <h1>Specific:</h1>
+          <h4>Who, what, when, where, why?</h4>
+          <%= f.text_area :S, :rows => "6", :placeholder =>"I will fight 3 dragons, by the winter sultace..."%>
+          
+      </section>
+      <section class="window">
+          <h1>Measurable:</h1>
+          <h4>How will you measure your progress?</h4>
+          <%= f.text_area :M, :rows =>"6",  :placeholder =>"When you check in using this app we will record some progress, but it helps to have another record somewhere..."%>
+          
+      </section>
+      <section class="window">
+          <h1>Achievable:</h1>
+          <h4>What will you do when you get stuck?</h4>
+          <%= f.text_area :A, :rows => "6", :placeholder => "People who can help you, classes you can take..."%>
+          
+      </section>
+      <section class="window">
+          <h1>Relevant:</h1>
+          <h4>What bad habit would you be willing to give up in order to make this</h4>
+          <%= f.text_area :R, :rows => "6", :placeholder => "Is this goal more important than facebook?..." %>
+          
+      </section>
+      <section class="window">
+          <h1>Timely:</h1>
+          <h4>If you had 20 hours to complete this goal, how many days would you need to spread that time across?</h4>
+          <%= f.text_area :T, :id => "timely", :rows =>"6", :placeholder => "1 month would be about 35ish minutes a day. 2 months would be 15 minutes..." %>
+        
+
+      </section>
+
+      <footer id="set-goals-icon-wrapper">
+            <%=f.submit 'set-goals-submit-btn', :class => 'set-goals-submit'%> 
+            <% end %>
+      </footer>
+  </div>
+</tbody>
+</table>
+

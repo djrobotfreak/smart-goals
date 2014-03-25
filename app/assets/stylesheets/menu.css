@@ -1,0 +1,233 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 22, 2014, 4:44:57 PM
+    Author     : huapa_000
+*/
+.m_main_menu,
+.m_main_menu ul{
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: cadetblue;
+    list-style: none;
+    text-transform: none;
+    line-height: 60px;
+    
+    font-family: "Lato", sans-serif;
+    
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    
+}
+
+.fs1 {
+    font-size: 48px;
+}
+.icon{
+    display:inline-block;   
+    width: 30px;
+    text-align: center;
+}
+
+.m_main_menu{
+    z-index: 11;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+        height: 60px;
+    font-size: 1em;
+    border-bottom: 1px solid cadetblue;
+}
+
+.m_main_menu a{
+    display: block;
+    height: 100%;
+    color: cadetblue;
+    text-decoration:none;
+    cursor:pointer;
+    
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    
+}
+
+.m_main_menu > li > a:hover{
+    background: cadetblue;
+    color: white;
+}
+
+.m_main_menu > li{
+    display: block;
+    float: left;
+    height: 100%;    
+    text-align: center;
+}
+
+.m_main_menu li .m_trigger{
+    position: relative;
+    width: 60px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m_main_menu >li:nth-child(3){
+    width: 118px;
+}
+.m_main_menu > li:last-child{
+    float: right;
+    width: 120px;
+}
+
+.m_main_menu > li > a{
+    padding: 0 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.m_main_menu:after{
+    display: table;
+    clear: both;
+    content:"";
+}
+
+#m_menu_wrapper{
+    z-index: -1;
+    position: fixed;
+    top: 60px;
+    bottom:0;
+    left: 0;
+    overflow:hidden;
+    border-top: 1px solid cadetblue;
+    background-color:#555555;
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: 300;
+    width: 0;
+    
+    -webkit-transition: width 0.3s, width ease-in-out;
+    -moz-transition: width 0.3s, width ease-in-out;
+    transition: width 0.3s, width ease-in-out;
+    
+    box-shadow:   0px 5px 5px rgba(0,0,0,0.6),
+                  0px 12px 12px rgba(0,0,0,0.4),
+                  0px 25px 25px rgba(0,0,0,0.2);
+    
+}
+
+.m_scroller{
+    position: absolute;
+    overflow-y: scroll;
+    background-color:#555555;
+    width: 400px;
+    height: 100%;
+}
+
+#m_menu {
+    border-bottom: 1px solid cadetblue;
+    text-align: left;
+    font-size: 1.1em;
+    
+}
+#m_menu li a{
+    background-color:#555555;
+    padding-left: 2%;
+    color: #FFF;
+}
+
+#m_menu li:not(:first-child),
+#m_menu li a {
+    box-shadow: inset 0 1px cadetblue;
+    -webkit-box-shadow: inset 0 1px cadetblue;
+    -moz-box-shadow: inset 0 1px cadetblue;
+}
+
+.m_submenu li {
+    background: #555;
+    padding-left: 1em;
+    overflow: hidden;
+}
+
+.m_submenu li a{
+        color: #AFEEF0 !important;
+}
+
+input.m_search{
+    position: relative;
+    z-index: 10;
+    height: max-content;
+    outline: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    color: cadetblue;
+    font-weight: 300;
+    font-family: 'Lato', Arial, sans-serif;
+    cursor: pointer;
+}
+
+/* placeholder */
+.m_search::-webkit-input-placeholder{ color: cadetblue;}
+.m_search:-moz-input-placeholder{ color: cadetblue;}
+.m_search::-moz-input-placeholder{ color: cadetblue;}
+.m_search:-ms-input-placeholder{ color: cadetblue;}
+
+/* hide placeholder when active in Chrome */
+.m_search:focus::-webkit-input-placeholder,
+.no-touch #m_menu li.m_search-item:hover .m_search:focus::-webkit-input-placeholder {
+        color: transparent
+}
+
+input.m_search:focus { cursor: text }
+
+.no-touch #m_menu li.m_search-item:hover input.m_search {
+        color: white
+}
+
+
+.m_icon span {
+    font-size: 50px;
+    line-height: 60px;
+    width:60px;
+    border: 1px solid cadetblue;
+    border-radius: 20%;
+}
+
+.m_icon span:hover {
+    border: 1px solid white;
+}
+
+/* styles for opening menu */
+#m_menu_wrapper.m_open{
+    width:340px;
+}
+
+
+/*Class Specific Coloring*/
+
+#m_menu .schedule{ background-color:#f75c4c; }
+#m_menu .directory{background-color:#42A9DC;}
+#m_menu .settings{background-color:#16a085 !important;}
+#m_menu .whiteboard{background-color:#92D050;}
+#m_menu .setworkspace{background-color:#e74c3c;}
+#m_user_logout{
+    background: #555;
+    list-style:none;
+}
+#m_logout_botton{
+    border-left: 1px solid whitesmoke;
+}
+#m_logout_botton:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+
